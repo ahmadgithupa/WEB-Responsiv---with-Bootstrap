@@ -1,0 +1,351 @@
+* {
+    font-family: montserrat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: f1fbff;
+}
+
+/*      -----------------  nav ---------------    */
+.navbar {
+    padding: 0;
+}
+
+.navbar-toggler {
+    outline: none;
+    border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+    outline: none;
+    border: none;
+}
+
+.navbar-brand {
+    color: black;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+    color: rgb(33, 4, 162);
+}
+
+.navbar-nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-nav li {
+    transition-duration: .3s;
+    padding: 10px;
+}
+
+.navbar-nav li:hover {
+    background-color: rgb(237, 237, 237);
+    /* transform: scale(1.2); */
+}
+
+.w-100 {
+    /* img background*/
+    height: 100vh;
+}
+
+/*      -----------------  header ---------------    */
+
+.sectoin-padding {
+    padding: 100px 0;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption {
+    bottom: 300px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-inner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .carousel-caption {
+        bottom: 30%;
+    }
+
+    .carousel-caption h5 {
+        font-size: 20px;
+        letter-spacing: normal;
+    }
+
+    .carousel-caption a {
+        padding: 10px 15px;
+    }
+
+    .carousel-caption p {
+        margin: 20px 0;
+        width: 100%;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+}
+
+/* oooooooooooooooooooooo About ooooooooooooooooooooo*/
+
+.about {
+    margin: 130px 0;
+}
+
+@media screen and (max-width: 767px) {
+    .about {
+        margin: 30px 0;
+        padding: 10px;
+    }
+
+    .about-img {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .about-text p {
+        margin: 10px 0;
+        line-height: 1.5;
+        font-size: 18px;
+        color: gray;
+    }
+}
+
+/* oooooooooooooooooooooo Services ooooooooooooooooooooo*/
+
+.services {
+    margin: 130px 0;
+}
+
+.cardText {
+    margin: 50px 0;
+}
+
+.cardText h2 {
+    font-size: 28px;
+}
+
+.cardText p {
+    font-size: 18px;
+    color: gray;
+}
+
+.services .card-body {
+    padding: 30px 16px;
+}
+
+.card-body i {
+    font-size: 60px;
+    position: relative;
+}
+
+.card-body h3 {
+    font-size: 24px;
+}
+
+.card-body p {
+    font-size: 16px;
+    width: 80%;
+    margin: auto;
+    line-height: 2;
+    color: rgb(233, 232, 232);
+
+}
+
+@media screen and (max-width: 767px) {
+    .services {
+        margin: 30px 0;
+        padding: 10px;
+    }
+
+    .cardText {
+        margin: 20px 0;
+    }
+
+    .cardText h2 {
+        font-size: 24px;
+        font-weight: bolder;
+        position: relative;
+        margin-bottom: 16px;
+    }
+
+    .cardText p {
+        font-size: 12px;
+        color: gray;
+    }
+
+    .card-body p {
+        font-size: 12px;
+    }
+
+    .card-body i {
+        font-size: 30px;
+    }
+}
+
+/* oooooooooooooooooooooo portfolio ooooooooooooooooooooo*/
+
+.portfolio {
+    margin: 130px 0;
+}
+
+.portfolio .card-body {
+    z-index: 5;
+    transition-duration: 1s;
+}
+
+.portfolio .card-body h5 {
+    font-size: 24px;
+    margin: 16px 0;
+}
+
+.portfolio .card-body p {
+    font-size: 16px;
+    margin: 16px auto;
+}
+
+.portfolio .card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 15px 15px 40px rgb(223, 222, 222);
+}
+
+.portfolio .card:hover {
+    box-shadow: 15px 15px 40px rgb(193, 193, 193);
+
+}
+
+.portfolio .card::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    border-radius: 50% 50% 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(242, 242, 242);
+    z-index: 3;
+    transition-duration: .5s;
+}
+
+.portfolio .card img {
+    filter: grayscale(100);
+    z-index: 4;
+    transition-duration: .5s;
+}
+
+.portfolio .card:hover img {
+    filter: none;
+    transform: scale(.92);
+
+}
+
+.portfolio .card:hover::before {
+    bottom: 0;
+    border-radius: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .portfolio {
+        margin: 30px 16px;
+    }
+
+    .portfolio .card-body h5 {
+        font-size: 20px;
+        margin: 6px auto;
+    }
+
+    .portfolio .card-body p {
+        font-size: 14px;
+        margin: 6px auto;
+        line-height: 1.5;
+    }
+
+    .portfolio img {
+        height: 260px;
+    }
+}
+
+/* oooooooooooooooooooooo Team ooooooooooooooooooooo*/
+
+.Team {
+    margin: 130px 0;
+}
+
+@media screen and (max-width: 767px) {
+    .Team {
+        margin: 30px 16px;
+    }
+}
+
+.Team .card {
+    box-shadow: 15px 15px 40px rgb(221, 220, 220);
+    border: none;
+}
+
+.Team .card i {
+    color: gray;
+}
+
+.Team .card i:hover {
+    color: rgb(73, 73, 130);
+}
+
+/* oooooooooooooooooooooo Contact ooooooooooooooooooooo*/
+
+
+.Contact {
+    margin: 130px 0;
+}
+
+@media screen and (max-width: 767px) {
+    .Contact {
+        margin: 30px 16px;
+    }
+}
+.Contact input , .Contact textarea , .Contact button {
+    box-shadow: 15px 15px 30px rgb(240, 238, 238);
+}
